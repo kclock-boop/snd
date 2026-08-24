@@ -473,6 +473,90 @@
       color: #172640;
       word-break: keep-all;
     }
+    .brochure-sheet {
+      position: relative;
+      overflow: hidden;
+      border-radius: 2.2rem;
+      border: 1px solid rgba(216, 228, 250, 0.98);
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.98), rgba(246,250,255,0.95)),
+        linear-gradient(135deg, rgba(31,111,255,0.04), rgba(255,210,51,0.04));
+      box-shadow:
+        0 30px 70px rgba(16, 48, 124, 0.10),
+        inset 0 1px 0 rgba(255,255,255,0.94);
+    }
+    .brochure-sheet::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 8%;
+      bottom: 8%;
+      width: 1px;
+      background: linear-gradient(180deg, rgba(216,228,250,0), rgba(216,228,250,0.9), rgba(216,228,250,0));
+      pointer-events: none;
+    }
+    .brochure-sheet::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 12% 12%, rgba(31,111,255,0.06), transparent 18%),
+        radial-gradient(circle at 88% 18%, rgba(255,210,51,0.10), transparent 16%);
+      pointer-events: none;
+    }
+    .brochure-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      padding: 0.5rem 0.85rem;
+      border-radius: 999px;
+      border: 1px solid rgba(216, 228, 250, 0.95);
+      background: rgba(255,255,255,0.92);
+      font-size: 0.76rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      color: #1f6fff;
+      text-transform: uppercase;
+      box-shadow: 0 12px 26px rgba(16, 48, 124, 0.06);
+    }
+    .brochure-kicker .dot {
+      width: 0.52rem;
+      height: 0.52rem;
+      border-radius: 999px;
+      background: #ffd233;
+      box-shadow: 0 0 14px rgba(255,210,51,0.48);
+    }
+    .brochure-strip {
+      border-radius: 1.4rem;
+      border: 1px solid rgba(216, 228, 250, 0.98);
+      background: linear-gradient(180deg, rgba(244,248,255,0.95), rgba(255,255,255,0.96));
+      box-shadow:
+        0 18px 34px rgba(16, 48, 124, 0.06),
+        inset 0 1px 0 rgba(255,255,255,0.9);
+    }
+    .brochure-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 5.3rem;
+      padding: 0.5rem 0.8rem;
+      border-radius: 999px;
+      background: linear-gradient(180deg, rgba(255,210,51,1), rgba(255,197,24,0.96));
+      color: #172640;
+      font-size: 0.78rem;
+      font-weight: 800;
+      box-shadow:
+        0 14px 28px rgba(255,210,51,0.16),
+        inset 0 1px 0 rgba(255,255,255,0.52);
+    }
+    .brochure-mini-card {
+      border-radius: 1.35rem;
+      border: 1px solid rgba(216, 228, 250, 0.98);
+      background: rgba(255,255,255,0.92);
+      box-shadow:
+        0 16px 32px rgba(16, 48, 124, 0.06),
+        inset 0 1px 0 rgba(255,255,255,0.88);
+    }
     .hero-silhouette {
       position: absolute;
       right: 5%;
@@ -680,6 +764,9 @@
       }
     }
     @media (max-width: 1023px) {
+      .brochure-sheet::before {
+        display: none;
+      }
       .hero-visual-stage {
         margin-top: 1rem;
       }
@@ -955,6 +1042,99 @@
               <div class="trust-logo rounded-[1.3rem] border border-line bg-shell px-5 py-4 text-center">
                 <p class="text-xs uppercase tracking-[0.18em] text-slate">Defence Ground</p>
                 <p class="mt-2 text-lg font-bold text-ink">K9 · 장갑차</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="px-4 py-10 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-7xl reveal">
+        <div class="brochure-sheet px-6 py-8 sm:px-8 lg:px-10 lg:py-10">
+          <div class="grid gap-8 lg:grid-cols-2">
+            <div class="relative z-10 break-kr">
+              <span class="brochure-kicker">
+                <span class="dot"></span>
+                Corporate Brochure
+              </span>
+              <h2 class="mt-6 font-display text-3xl font-bold tracking-tight text-ink sm:text-5xl">
+                SND를 한 장으로 읽는
+                <span class="block text-brand">회사 개요 브로슈어</span>
+              </h2>
+              <p class="mt-5 max-w-2xl text-lg leading-relaxed text-slate">
+                설립 연혁, 품질 인증, 주요 프로그램 대응 이력을 한 번에 확인할 수 있도록
+                소개서 한 페이지를 펼친 느낌으로 정리했습니다.
+              </p>
+
+              <div class="mt-8 brochure-strip p-5">
+                <div class="flex items-start gap-4">
+                  <span class="brochure-badge">2011</span>
+                  <div>
+                    <p class="text-sm font-semibold text-brand">회사 설립</p>
+                    <p class="mt-2 text-lg font-bold text-ink">(주)에스엔디 창립 및 항공·방산 정밀가공 사업 기반 구축</p>
+                    <p class="mt-2 text-sm leading-relaxed text-slate">창원 기반 제조 인프라를 바탕으로 항공 구조물, 방산 부품, 치공구 대응 체계를 구축했습니다.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-4 grid gap-4 sm:grid-cols-2">
+                <div class="brochure-mini-card p-5">
+                  <p class="text-sm font-semibold text-brand">품질 인증</p>
+                  <p class="mt-2 text-lg font-bold text-ink">AS9100 Rev.D</p>
+                  <p class="mt-1 text-sm text-slate">항공·방산 품질 보증 체계 운영</p>
+                </div>
+                <div class="brochure-mini-card p-5">
+                  <p class="text-sm font-semibold text-brand">경영 시스템</p>
+                  <p class="mt-2 text-lg font-bold text-ink">ISO 9001:2015</p>
+                  <p class="mt-1 text-sm text-slate">지속적 개선 기반 운영 표준</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="relative z-10 break-kr">
+              <div class="grid gap-4">
+                <div class="brochure-strip p-5">
+                  <p class="text-sm font-semibold text-brand">주요 프로그램 대응</p>
+                  <div class="mt-4 grid gap-3 sm:grid-cols-2">
+                    <div class="brochure-mini-card p-4">
+                      <p class="text-xs uppercase tracking-[0.16em] text-slate">Aerospace</p>
+                      <p class="mt-2 text-lg font-bold text-ink">B737 · Embraer E2 · C390</p>
+                      <p class="mt-2 text-sm leading-relaxed text-slate">민항 및 항공 구조물 중심 정밀 가공</p>
+                    </div>
+                    <div class="brochure-mini-card p-4">
+                      <p class="text-xs uppercase tracking-[0.16em] text-slate">Defence</p>
+                      <p class="mt-2 text-lg font-bold text-ink">KF-21 · LAH · K9</p>
+                      <p class="mt-2 text-sm leading-relaxed text-slate">방산 프로그램 대응과 품질 추적성 운영</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="brochure-strip p-5 canary-panel">
+                  <p class="text-sm font-semibold text-brand">핵심 제조 범위</p>
+                  <div class="mt-4 grid gap-3 sm:grid-cols-3">
+                    <div class="brochure-mini-card p-4">
+                      <p class="text-sm font-bold text-ink">3축 / 4축 MCT</p>
+                      <p class="mt-2 text-sm leading-relaxed text-slate">정밀 가공 공정</p>
+                    </div>
+                    <div class="brochure-mini-card p-4">
+                      <p class="text-sm font-bold text-ink">Router · Forming</p>
+                      <p class="mt-2 text-sm leading-relaxed text-slate">복합 형상 및 특수 성형 대응</p>
+                    </div>
+                    <div class="brochure-mini-card p-4">
+                      <p class="text-sm font-bold text-ink">FAI · 출하검사</p>
+                      <p class="mt-2 text-sm leading-relaxed text-slate">품질 검증과 추적성 관리</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="brochure-strip p-5">
+                  <p class="text-sm font-semibold text-brand">브로슈어 한 줄 요약</p>
+                  <p class="mt-3 text-xl font-bold leading-snug text-ink">
+                    항공·방산 부품 가공, 치공구 제작, 품질 보증, 데이터 기반 현장 운영까지
+                    하나의 제조 파트너 관점으로 연결합니다.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
