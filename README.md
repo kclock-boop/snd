@@ -14,6 +14,8 @@ SND의 항공·방산 정밀가공 역량, 2회차 컨설팅 산출물, Dashboar
 - Dashboard 프로토타입: [docs/SND_dashboard_prototype.html](./docs/SND_dashboard_prototype.html)
 - 발표자료 PDF: [ppt/SND_컨설팅2회차_실행안_및_대시보드초안.pdf](./ppt/SND_컨설팅2회차_실행안_및_대시보드초안.pdf)
 - 발표자료 PPTX: [ppt/SND_컨설팅2회차_실행안_및_대시보드초안.pptx](./ppt/SND_컨설팅2회차_실행안_및_대시보드초안.pptx)
+- 2026-08-25 발표자료 1: [ppt/SnD_현장업무자동화_Flow_요약_PPT.pptx](./ppt/SnD_현장업무자동화_Flow_요약_PPT.pptx)
+- 2026-08-25 발표자료 2: [ppt/SnD_요약_구축계획_PPT.pptx](./ppt/SnD_요약_구축계획_PPT.pptx)
 - 컨설팅 구성요약: [proposal/SND_컨설팅2회차_구성요약.md](./proposal/SND_컨설팅2회차_구성요약.md)
 
 ## 회사 개요
@@ -53,7 +55,13 @@ SND의 항공·방산 정밀가공 역량, 2회차 컨설팅 산출물, Dashboar
 - 파일: [ppt/SND_컨설팅2회차_실행안_및_대시보드초안.pptx](./ppt/SND_컨설팅2회차_실행안_및_대시보드초안.pptx)
 - 설명: 현장업무 자동화, 통합 Dashboard, PoC 실행 방향을 정리한 2회차 컨설팅 발표자료
 
-### 4. 컨설팅 구성요약
+### 4. 2026-08-25 발표용 추가 PPT
+
+- 파일: [ppt/SnD_현장업무자동화_Flow_요약_PPT.pptx](./ppt/SnD_현장업무자동화_Flow_요약_PPT.pptx)
+- 파일: [ppt/SnD_요약_구축계획_PPT.pptx](./ppt/SnD_요약_구축계획_PPT.pptx)
+- 설명: 2026년 8월 25일 SND 2차 컨설팅 발표를 위해 정리한 현장업무자동화 Flow 요약본과 구축계획 요약본
+
+### 5. 컨설팅 구성요약
 
 - 파일: [proposal/SND_컨설팅2회차_구성요약.md](./proposal/SND_컨설팅2회차_구성요약.md)
 - 설명: 세션 목적, MVP 범위, 역할별 Dashboard 시각, 데이터 구조, 단계별 로드맵을 정리한 기획 문서
