@@ -144,6 +144,90 @@
       pointer-events: none;
       filter: drop-shadow(0 20px 40px rgba(0,0,0,0.22));
     }
+    .hero-orbit {
+      position: absolute;
+      right: 4%;
+      top: 4%;
+      width: 420px;
+      height: 420px;
+      pointer-events: none;
+      opacity: 0.92;
+    }
+    .hero-orbit::before,
+    .hero-orbit::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.10);
+    }
+    .hero-orbit::after {
+      inset: 38px;
+      border-color: rgba(83,197,255,0.18);
+      border-style: dashed;
+    }
+    .orbit-ring {
+      position: absolute;
+      inset: 0;
+      animation: orbit-spin 24s linear infinite;
+      transform-origin: 50% 50%;
+    }
+    .orbit-plane {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 78px;
+      height: 78px;
+      margin-left: -39px;
+      margin-top: -39px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.28), rgba(53,182,255,0.14));
+      border: 1px solid rgba(255,255,255,0.18);
+      box-shadow:
+        0 20px 40px rgba(12, 29, 66, 0.34),
+        inset 0 1px 0 rgba(255,255,255,0.22);
+      color: #ffffff;
+      transform: translateY(-174px) rotate(18deg);
+      backdrop-filter: blur(8px);
+    }
+    .orbit-plane::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 64px;
+      width: 92px;
+      height: 2px;
+      transform: translateY(-50%);
+      background: linear-gradient(90deg, rgba(255,255,255,0), rgba(120,213,255,0.85));
+      filter: blur(1px);
+      opacity: 0.92;
+    }
+    .orbit-plane iconify-icon {
+      filter: drop-shadow(0 8px 18px rgba(0,0,0,0.24));
+    }
+    .orbit-core {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 158px;
+      height: 158px;
+      transform: translate(-50%, -50%);
+      border-radius: 999px;
+      background:
+        radial-gradient(circle, rgba(53,182,255,0.24), rgba(53,182,255,0.02) 62%, rgba(255,255,255,0) 72%);
+      filter: blur(1px);
+    }
+    @keyframes orbit-spin {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
     .nav-pill,
     .cta-btn,
     .soft-card,
@@ -184,6 +268,26 @@
       transform: translateY(0);
       filter: blur(0);
     }
+    @media (max-width: 1279px) {
+      .hero-orbit {
+        width: 320px;
+        height: 320px;
+        right: -2%;
+        top: 2%;
+      }
+      .orbit-plane {
+        transform: translateY(-128px) rotate(18deg);
+      }
+      .orbit-plane::before {
+        width: 68px;
+        right: 58px;
+      }
+    }
+    @media (max-width: 1023px) {
+      .hero-orbit {
+        display: none;
+      }
+    }
   </style>
 </head>
 <body class="min-h-screen overflow-x-hidden">
@@ -221,6 +325,14 @@
           <div class="hero-glow gold"></div>
           <div class="hero-silhouette hidden lg:block">
             <iconify-icon icon="solar:plane-2-bold-duotone" width="360"></iconify-icon>
+          </div>
+          <div class="hero-orbit hidden lg:block" aria-hidden="true">
+            <div class="orbit-core"></div>
+            <div class="orbit-ring">
+              <div class="orbit-plane">
+                <iconify-icon icon="solar:plane-2-bold-duotone" width="38"></iconify-icon>
+              </div>
+            </div>
           </div>
 
           <div class="relative z-10 grid items-center gap-10 lg:grid-cols-[1.08fr_0.92fr]">
