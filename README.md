@@ -8,6 +8,7 @@ SND 2회차 컨설팅 자료와 대시보드/홈페이지 초안을 관리하는
 
 - 실제 홈페이지: [https://snd-space-defence.kangsahoi.chatgpt.site](https://snd-space-defence.kangsahoi.chatgpt.site)
 - GitHub 내 원본 파일: [site/index.html](./site/index.html)
+- GitHub Pages 예정 주소: `https://kclock-boop.github.io/snd/`
 
 ## 개요
 
@@ -38,9 +39,17 @@ SND 2회차 컨설팅 자료와 대시보드/홈페이지 초안을 관리하는
 ### 4. 홈페이지 초안
 
 - 실제 홈페이지: [https://snd-space-defence.kangsahoi.chatgpt.site](https://snd-space-defence.kangsahoi.chatgpt.site)
+- GitHub Pages 예정 주소: `https://kclock-boop.github.io/snd/`
 - 파일: [site/index.html](./site/index.html)
 - 설명:
   SND 회사 소개와 스마트 제조 확장 방향을 담은 홈페이지형 랜딩페이지 초안
+
+## GitHub Pages 배포
+
+- 저장소에 GitHub Actions 기반 Pages 배포 워크플로를 추가했습니다.
+- `Settings > Pages > Source`에서 `GitHub Actions`를 선택하면 `site/` 폴더가 일반 공개형 홈페이지로 배포됩니다.
+- 공식 GitHub 문서 기준으로 Pages는 공개 사이트이므로, 저장소가 `private`여도 사이트는 외부 공개가 될 수 있습니다.
+- 다만 `private` 저장소 Pages 사용 가능 여부는 현재 계정 플랜에 따라 달라질 수 있습니다.
 
 ## 폴더 구조
 
