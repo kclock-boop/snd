@@ -4,6 +4,11 @@ SND 2회차 컨설팅 자료와 대시보드/홈페이지 초안을 관리하는
 
 이 저장소에는 `2회차 컨설팅 발표자료`, `현장업무 자동화 Dashboard 프로토타입`, 그리고 후속 홈페이지 구축용 산출물이 포함됩니다.
 
+## 홈페이지 바로가기
+
+- 실제 홈페이지: [https://snd-space-defence.kangsahoi.chatgpt.site](https://snd-space-defence.kangsahoi.chatgpt.site)
+- GitHub 내 원본 파일: [site/index.html](./site/index.html)
+
 ## 개요
 
 - 기업명: SND
@@ -32,6 +37,7 @@ SND 2회차 컨설팅 자료와 대시보드/홈페이지 초안을 관리하는
 
 ### 4. 홈페이지 초안
 
+- 실제 홈페이지: [https://snd-space-defence.kangsahoi.chatgpt.site](https://snd-space-defence.kangsahoi.chatgpt.site)
 - 파일: [site/index.html](./site/index.html)
 - 설명:
   SND 회사 소개와 스마트 제조 확장 방향을 담은 홈페이지형 랜딩페이지 초안
