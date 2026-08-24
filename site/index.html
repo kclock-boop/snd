@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SND | 항공·방산 정밀가공 파트너</title>
-  <meta name="description" content="SND는 항공·방산 부품 가공과 치공구 제작을 수행하는 정밀 제조 파트너입니다. 밝고 직관적인 랜딩 페이지로 회사소개, 핵심역량, 품질체계, 스마트 제조 방향을 안내합니다.">
+  <meta name="description" content="SND는 항공·방산 부품 가공과 치공구 제작을 수행하는 정밀 제조 파트너입니다. 항공기·방산 기업답게 웅장하고 입체적인 톤으로 회사소개, 핵심역량, 품질체계, 스마트 제조 방향을 안내합니다.">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,22 +17,25 @@
         extend: {
           colors: {
             brand: "#1f6fff",
-            branddeep: "#123d9b",
-            brandsky: "#36b3ff",
+            deep: "#081a3a",
+            deep2: "#102b61",
+            sky: "#35b6ff",
             gold: "#ffbf2f",
-            ink: "#16233b",
-            slate: "#53627c",
-            shell: "#f5f9ff",
-            line: "#d9e5fb"
+            goldsoft: "#fff1bf",
+            ink: "#172640",
+            slate: "#5c6d88",
+            shell: "#f4f8ff",
+            line: "#d8e4fa"
           },
           fontFamily: {
             sans: ["Pretendard", "Geist", "system-ui", "sans-serif"],
             display: ["Geist", "Pretendard", "system-ui", "sans-serif"]
           },
           boxShadow: {
-            halo: "0 32px 90px rgba(49, 117, 255, 0.18)",
-            card: "0 24px 60px rgba(34, 74, 160, 0.10)",
-            soft: "0 10px 30px rgba(29, 65, 150, 0.08)"
+            frame: "0 24px 80px rgba(15, 44, 120, 0.14)",
+            plate: "0 30px 70px rgba(21, 55, 140, 0.10)",
+            float: "0 18px 40px rgba(24, 61, 149, 0.14)",
+            inner: "inset 0 1px 0 rgba(255,255,255,0.65)"
           }
         }
       }
@@ -43,97 +46,140 @@
       scroll-behavior: smooth;
     }
     body {
+      margin: 0;
       font-family: "Pretendard", "Geist", system-ui, sans-serif;
+      color: #172640;
       background:
-        radial-gradient(circle at top left, rgba(62, 145, 255, 0.18), transparent 24%),
-        radial-gradient(circle at 90% 18%, rgba(255, 191, 47, 0.16), transparent 18%),
-        linear-gradient(180deg, #f8fbff 0%, #eef5ff 45%, #ffffff 100%);
-      color: #16233b;
+        radial-gradient(circle at 10% 0%, rgba(31,111,255,0.18), transparent 26%),
+        radial-gradient(circle at 90% 12%, rgba(255,191,47,0.16), transparent 22%),
+        linear-gradient(180deg, #f7faff 0%, #eef5ff 44%, #ffffff 100%);
     }
     .break-kr {
       word-break: keep-all;
     }
-    .hero-panel {
+    .metal-shell {
+      border: 1px solid rgba(216, 228, 250, 0.98);
+      background: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(244,248,255,0.92));
+      box-shadow:
+        0 28px 70px rgba(21, 55, 140, 0.10),
+        inset 0 1px 0 rgba(255,255,255,0.85);
+    }
+    .double-plate {
+      padding: 8px;
+      border-radius: 2rem;
+      background: linear-gradient(180deg, rgba(255,255,255,0.84), rgba(232,240,255,0.82));
+      border: 1px solid rgba(208, 223, 250, 0.95);
+      box-shadow:
+        0 24px 65px rgba(17, 51, 131, 0.10),
+        inset 0 1px 0 rgba(255,255,255,0.9);
+    }
+    .double-plate > div {
+      border-radius: calc(2rem - 8px);
+      border: 1px solid rgba(221, 232, 252, 0.92);
+      background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(247,250,255,0.96));
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.92);
+    }
+    .hero-stage {
       position: relative;
       overflow: hidden;
       background:
-        linear-gradient(120deg, rgba(12, 34, 88, 0.94), rgba(19, 66, 168, 0.82)),
-        radial-gradient(circle at 80% 20%, rgba(255,255,255,0.12), transparent 22%),
-        linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+        linear-gradient(135deg, rgba(8,26,58,0.98), rgba(16,43,97,0.92) 46%, rgba(24,79,180,0.85)),
+        radial-gradient(circle at 80% 12%, rgba(53,182,255,0.20), transparent 30%);
     }
-    .hero-panel::before {
+    .hero-stage::before {
       content: "";
       position: absolute;
       inset: 0;
       background:
-        linear-gradient(90deg, rgba(9, 24, 61, 0.42), rgba(9, 24, 61, 0.12)),
-        url("https://images.unsplash.com/photo-1565034946487-077786996e27?auto=format&fit=crop&w=1400&q=80") center/cover;
-      mix-blend-mode: screen;
-      opacity: 0.22;
-    }
-    .hero-grid,
-    .floating-glow {
-      position: absolute;
+        linear-gradient(90deg, rgba(6,16,38,0.84), rgba(6,16,38,0.18)),
+        linear-gradient(180deg, rgba(255,255,255,0.05), transparent 55%);
       pointer-events: none;
     }
     .hero-grid {
+      position: absolute;
       inset: 0;
+      opacity: 0.22;
       background-image:
-        linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.08) 1px, transparent 1px);
+        linear-gradient(rgba(255,255,255,0.12) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.10) 1px, transparent 1px);
       background-size: 34px 34px;
-      mask-image: linear-gradient(180deg, rgba(0,0,0,0.55), transparent 100%);
+      mask-image: linear-gradient(180deg, rgba(0,0,0,0.8), transparent 100%);
+      pointer-events: none;
     }
-    .floating-glow {
-      width: 320px;
-      height: 320px;
+    .hero-ring,
+    .hero-glow {
+      position: absolute;
       border-radius: 999px;
-      filter: blur(18px);
-      opacity: 0.75;
+      pointer-events: none;
     }
-    .floating-glow.one {
-      right: -60px;
+    .hero-ring {
+      border: 1px solid rgba(255,255,255,0.18);
+      opacity: 0.45;
+    }
+    .hero-glow {
+      filter: blur(22px);
+      opacity: 0.8;
+    }
+    .hero-glow.sky {
+      width: 340px;
+      height: 340px;
+      right: -80px;
       top: -80px;
-      background: radial-gradient(circle, rgba(100,196,255,0.55), transparent 62%);
+      background: radial-gradient(circle, rgba(53,182,255,0.42), transparent 62%);
     }
-    .floating-glow.two {
-      left: -90px;
+    .hero-glow.gold {
+      width: 280px;
+      height: 280px;
+      left: -100px;
       bottom: -120px;
-      background: radial-gradient(circle, rgba(255,191,47,0.35), transparent 65%);
+      background: radial-gradient(circle, rgba(255,191,47,0.24), transparent 66%);
     }
     .nav-pill,
     .cta-btn,
+    .soft-card,
     .feature-pill,
-    .soft-card {
-      transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease, background 0.35s ease;
+    .program-card {
+      transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+        box-shadow 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+        border-color 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+        background 0.5s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .nav-pill:hover,
     .cta-btn:hover,
-    .feature-pill:hover,
-    .soft-card:hover {
+    .feature-pill:hover {
       transform: translateY(-2px);
     }
-    .soft-card:hover {
-      border-color: #b9d0ff;
-      box-shadow: 0 24px 60px rgba(29, 65, 150, 0.12);
+    .soft-card:hover,
+    .program-card:hover {
+      transform: translateY(-6px);
+      border-color: #b6cdff;
+      box-shadow: 0 28px 70px rgba(19, 55, 140, 0.14);
+    }
+    .cta-btn:active {
+      transform: scale(0.98);
     }
     .reveal {
       opacity: 0;
-      transform: translateY(24px);
-      transition: opacity 0.7s ease, transform 0.7s ease;
+      transform: translateY(30px);
+      filter: blur(4px);
+      transition:
+        opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+        filter 0.8s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .reveal.is-visible {
       opacity: 1;
       transform: translateY(0);
+      filter: blur(0);
     }
   </style>
 </head>
 <body class="min-h-screen overflow-x-hidden">
-  <header class="sticky top-0 z-40 border-b border-white/70 bg-white/88 backdrop-blur">
+  <header class="sticky top-0 z-40 border-b border-white/70 bg-white/88 backdrop-blur-xl">
     <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
       <a href="#top" class="flex items-center gap-3">
-        <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-brand text-white shadow-soft">
-          <iconify-icon icon="solar:cpu-bolt-linear" width="28"></iconify-icon>
+        <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-brand text-white shadow-float">
+          <iconify-icon icon="solar:radar-2-bold-duotone" width="28"></iconify-icon>
         </div>
         <div class="break-kr">
           <p class="font-display text-xl font-bold tracking-tight text-ink">SND</p>
@@ -143,8 +189,9 @@
 
       <nav class="hidden items-center gap-4 md:flex">
         <a href="#company" class="nav-pill rounded-full border border-line bg-white px-6 py-3 text-sm font-semibold text-brand">회사소개</a>
-        <a href="#capabilities" class="nav-pill rounded-full border border-transparent bg-gold px-6 py-3 text-sm font-semibold text-ink shadow-soft">핵심역량</a>
-        <a href="#future" class="nav-pill rounded-full border border-transparent bg-brand px-6 py-3 text-sm font-semibold text-white shadow-soft">스마트 제조</a>
+        <a href="#capabilities" class="nav-pill rounded-full border border-transparent bg-gold px-6 py-3 text-sm font-semibold text-ink shadow-float">핵심역량</a>
+        <a href="#quality" class="nav-pill rounded-full border border-white bg-white px-6 py-3 text-sm font-semibold text-branddeep">품질체계</a>
+        <a href="#future" class="nav-pill rounded-full border border-transparent bg-brand px-6 py-3 text-sm font-semibold text-white shadow-float">스마트 제조</a>
       </nav>
     </div>
   </header>
@@ -152,37 +199,119 @@
   <main id="top">
     <section class="px-4 pb-12 pt-10 sm:px-6 lg:px-8 lg:pb-20 lg:pt-14">
       <div class="mx-auto max-w-7xl reveal">
-        <div class="hero-panel rounded-[2.25rem] px-6 py-10 shadow-halo sm:px-10 lg:px-14 lg:py-16">
+        <div class="hero-stage rounded-[2.5rem] px-6 py-10 shadow-frame sm:px-10 lg:px-14 lg:py-16">
           <div class="hero-grid"></div>
-          <div class="floating-glow one"></div>
-          <div class="floating-glow two"></div>
+          <div class="hero-ring right-[6%] top-[12%] h-52 w-52"></div>
+          <div class="hero-ring right-[16%] top-[22%] h-80 w-80"></div>
+          <div class="hero-glow sky"></div>
+          <div class="hero-glow gold"></div>
 
-          <div class="relative z-10 mx-auto max-w-4xl text-center break-kr">
-            <span class="inline-flex rounded-full bg-gold px-5 py-2 text-sm font-bold text-ink shadow-soft">
-              2026 항공·방산 제조 경쟁력 소개
-            </span>
-            <h1 class="mt-7 font-display text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl lg:text-7xl">
-              항공·방산 정밀가공 현장을 위한
-              <span class="block text-brandsky">SND 제조 역량 소개 페이지</span>
-            </h1>
-            <p class="mx-auto mt-6 max-w-3xl text-base leading-relaxed text-blue-50/92 sm:text-xl">
-              복잡한 설명 대신 핵심 공정, 품질 체계, 스마트 제조 확장 방향을
-              한 화면에서 이해할 수 있도록 정리한 밝고 직관적인 회사소개형 랜딩 페이지입니다.
-            </p>
+          <div class="relative z-10 grid items-center gap-10 lg:grid-cols-[1.08fr_0.92fr]">
+            <div class="break-kr">
+              <span class="inline-flex rounded-full bg-gold px-5 py-2 text-sm font-bold text-ink shadow-float">
+                Aerospace & Defence Precision Manufacturing
+              </span>
+              <h1 class="mt-7 font-display text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl lg:text-7xl">
+                항공·방산 제조 현장을 위한
+                <span class="block text-sky">웅장한 정밀가공 파트너</span>
+              </h1>
+              <p class="mt-6 max-w-3xl text-base leading-relaxed text-blue-50/92 sm:text-xl">
+                SND는 항공기 부품, 방산 부품, 치공구 제작을 수행하는 정밀 제조 기업입니다.
+                3축·4축 MCT, Router, 특수 성형, 품질 추적 체계를 바탕으로 납기와 품질을 함께 지켜냅니다.
+              </p>
 
-            <div class="mt-8 flex flex-wrap items-center justify-center gap-3">
-              <span class="feature-pill inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-semibold text-ink shadow-soft">
-                <iconify-icon icon="solar:verified-check-bold" class="text-brand"></iconify-icon>
-                AS9100 Rev.D 기반 품질 운영
-              </span>
-              <span class="feature-pill inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-semibold text-ink shadow-soft">
-                <iconify-icon icon="solar:widget-4-bold" class="text-brand"></iconify-icon>
-                3축·4축 MCT / Router / 성형
-              </span>
-              <span class="feature-pill inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-semibold text-ink shadow-soft">
-                <iconify-icon icon="solar:chart-square-bold" class="text-brand"></iconify-icon>
-                Dashboard · MES 확장 방향
-              </span>
+              <div class="mt-8 flex flex-col gap-4 sm:flex-row">
+                <a href="#capabilities" class="cta-btn inline-flex items-center justify-center gap-3 rounded-full bg-white px-8 py-4 text-base font-bold text-ink shadow-float">
+                  핵심 역량 보기
+                  <span class="flex h-9 w-9 items-center justify-center rounded-full bg-deep text-white">
+                    <iconify-icon icon="solar:arrow-right-linear" width="20"></iconify-icon>
+                  </span>
+                </a>
+                <a href="../docs/SND_dashboard_prototype.html" class="cta-btn inline-flex items-center justify-center gap-3 rounded-full border border-white/18 bg-white/10 px-8 py-4 text-base font-bold text-white">
+                  Dashboard 시안 보기
+                  <span class="flex h-9 w-9 items-center justify-center rounded-full bg-white/14 text-white">
+                    <iconify-icon icon="solar:monitor-smartphone-linear" width="20"></iconify-icon>
+                  </span>
+                </a>
+              </div>
+
+              <div class="mt-8 flex flex-wrap gap-3">
+                <span class="feature-pill inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-semibold text-ink shadow-float">
+                  <iconify-icon icon="solar:shield-check-bold" class="text-brand"></iconify-icon>
+                  AS9100 Rev.D 품질 운영
+                </span>
+                <span class="feature-pill inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-semibold text-ink shadow-float">
+                  <iconify-icon icon="solar:widget-4-bold" class="text-brand"></iconify-icon>
+                  MCT · Router · 성형
+                </span>
+                <span class="feature-pill inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-semibold text-ink shadow-float">
+                  <iconify-icon icon="solar:chart-square-bold" class="text-brand"></iconify-icon>
+                  MES · Dashboard 확장
+                </span>
+              </div>
+            </div>
+
+            <div class="relative">
+              <div class="double-plate">
+                <div class="p-6 lg:p-7">
+                  <div class="grid gap-4 md:grid-cols-[1.06fr_0.94fr]">
+                    <div class="rounded-[1.8rem] border border-white/10 bg-[linear-gradient(180deg,rgba(10,29,67,0.98),rgba(15,49,110,0.96))] p-6 text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.10)]">
+                      <div class="flex items-start justify-between gap-4">
+                        <div>
+                          <p class="text-sm text-blue-100/70">Precision Platform</p>
+                          <p class="mt-3 break-kr text-3xl font-bold leading-snug">정밀 가공과 품질 흐름을 함께 운용하는 제조 체계</p>
+                        </div>
+                        <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white/8 text-sky">
+                          <iconify-icon icon="solar:radar-2-linear" width="24"></iconify-icon>
+                        </span>
+                      </div>
+                      <div class="mt-8 grid gap-3 sm:grid-cols-2">
+                        <div class="rounded-2xl border border-white/8 bg-white/6 p-4">
+                          <p class="text-xs uppercase tracking-[0.14em] text-blue-100/60">설립</p>
+                          <p class="mt-2 text-2xl font-bold">2011</p>
+                        </div>
+                        <div class="rounded-2xl border border-white/8 bg-white/6 p-4">
+                          <p class="text-xs uppercase tracking-[0.14em] text-blue-100/60">임직원</p>
+                          <p class="mt-2 text-2xl font-bold">14명</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="rounded-[1.8rem] border border-line bg-white p-5 shadow-inner">
+                      <p class="text-sm font-semibold text-brand">Manufacturing Field</p>
+                      <div class="mt-5 space-y-3">
+                        <div class="rounded-2xl bg-shell p-4">
+                          <p class="font-semibold text-ink">3축 / 4축 MCT</p>
+                          <p class="mt-1 break-kr text-sm leading-relaxed text-slate">항공 구조물과 방산 부품 정밀 가공</p>
+                        </div>
+                        <div class="rounded-2xl bg-shell p-4">
+                          <p class="font-semibold text-ink">Router 가공</p>
+                          <p class="mt-1 break-kr text-sm leading-relaxed text-slate">대형 판재와 복합형상 대응</p>
+                        </div>
+                        <div class="rounded-2xl bg-shell p-4">
+                          <p class="font-semibold text-ink">Hot Joggle / Forming</p>
+                          <p class="mt-1 break-kr text-sm leading-relaxed text-slate">특수 성형과 맞춤 제조 지원</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="mt-4 grid gap-4 md:grid-cols-3">
+                    <div class="program-card rounded-[1.6rem] border border-line bg-white p-5">
+                      <p class="text-sm text-slate">주요 기종 / 프로그램</p>
+                      <p class="mt-3 break-kr text-lg font-bold leading-snug text-ink">B737 · Embraer E2 · C390 · KF-21 · LAH</p>
+                    </div>
+                    <div class="program-card rounded-[1.6rem] border border-line bg-white p-5">
+                      <p class="text-sm text-slate">품질 운영</p>
+                      <p class="mt-3 break-kr text-lg font-bold leading-snug text-ink">FAI · 출하검사 · 추적성 · 시정조치</p>
+                    </div>
+                    <div class="program-card rounded-[1.6rem] border border-line bg-white p-5">
+                      <p class="text-sm text-slate">확장 방향</p>
+                      <p class="mt-3 break-kr text-lg font-bold leading-snug text-ink">MES · Dashboard · 데이터 기반 운영</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -190,67 +319,32 @@
     </section>
 
     <section class="px-4 py-6 sm:px-6 lg:px-8">
-      <div class="mx-auto grid max-w-7xl gap-8 lg:grid-cols-3">
-        <article class="soft-card reveal rounded-[2rem] border border-line bg-white p-8 shadow-card">
-          <div class="flex items-center justify-between">
-            <div class="flex h-20 w-20 items-center justify-center rounded-[1.6rem] bg-blue-50 text-brand">
-              <iconify-icon icon="solar:buildings-3-bold-duotone" width="40"></iconify-icon>
+      <div class="mx-auto max-w-7xl reveal">
+        <div class="metal-shell rounded-[2rem] px-6 py-6 sm:px-8">
+          <div class="grid gap-6 md:grid-cols-4">
+            <div>
+              <p class="text-sm text-slate">핵심 고객 신뢰 기준</p>
+              <p class="mt-2 text-2xl font-bold text-ink">OTD 중심 납기 운영</p>
             </div>
-            <span class="rounded-full bg-brand px-4 py-2 text-sm font-bold text-white">기업 소개</span>
-          </div>
-          <h2 class="mt-8 break-kr text-4xl font-bold tracking-tight text-ink">SND 회사 개요</h2>
-          <p class="mt-4 break-kr text-lg leading-relaxed text-slate">
-            창원 기반의 항공·방산 정밀가공 기업으로, 부품 가공과 치공구 제작을 중심으로
-            고객 맞춤형 제조 대응을 수행합니다.
-          </p>
-          <div class="mt-8 space-y-3 text-sm text-slate">
-            <div class="rounded-2xl bg-shell px-4 py-4">설립: <strong class="text-ink">2011년</strong></div>
-            <div class="rounded-2xl bg-shell px-4 py-4">임직원: <strong class="text-ink">14명</strong></div>
-            <div class="rounded-2xl bg-shell px-4 py-4">주요 사업: <strong class="text-ink">항공 · 방산 · 치공구</strong></div>
-          </div>
-        </article>
-
-        <article class="soft-card reveal rounded-[2rem] border border-line bg-white p-8 shadow-card" style="transition-delay: 80ms;">
-          <div class="flex items-center justify-between">
-            <div class="flex h-20 w-20 items-center justify-center rounded-[1.6rem] bg-amber-50 text-amber-500">
-              <iconify-icon icon="solar:shield-check-bold-duotone" width="40"></iconify-icon>
+            <div>
+              <p class="text-sm text-slate">품질 시스템</p>
+              <p class="mt-2 text-2xl font-bold text-ink">AS9100 Rev.D</p>
             </div>
-            <span class="rounded-full bg-amber-100 px-4 py-2 text-sm font-bold text-amber-700">품질 체계</span>
-          </div>
-          <h2 class="mt-8 break-kr text-4xl font-bold tracking-tight text-ink">품질 보증 흐름</h2>
-          <p class="mt-4 break-kr text-lg leading-relaxed text-slate">
-            계약 검토, 공정 계획, FAI, 출하검사, 시정조치까지 이어지는
-            품질 중심 운영 구조를 유지하고 있습니다.
-          </p>
-          <div class="mt-8 grid gap-3 text-sm">
-            <div class="rounded-2xl border border-blue-100 bg-blue-50 px-4 py-4 font-medium text-ink">AS9100 Rev.D / ISO 9001</div>
-            <div class="rounded-2xl border border-blue-100 bg-blue-50 px-4 py-4 font-medium text-ink">추적성 관리 / 출하검사 / FAI</div>
-            <div class="rounded-2xl border border-blue-100 bg-blue-50 px-4 py-4 font-medium text-ink">고객 만족 실현 · 무결점 품질 · 지속 개선</div>
-          </div>
-        </article>
-
-        <article class="soft-card reveal rounded-[2rem] border border-line bg-white p-8 shadow-card" style="transition-delay: 160ms;">
-          <div class="flex items-center justify-between">
-            <div class="flex h-20 w-20 items-center justify-center rounded-[1.6rem] bg-indigo-50 text-branddeep">
-              <iconify-icon icon="solar:monitor-smartphone-bold-duotone" width="40"></iconify-icon>
+            <div>
+              <p class="text-sm text-slate">보유 설비</p>
+              <p class="mt-2 text-2xl font-bold text-ink">20대</p>
             </div>
-            <span class="rounded-full bg-sky-100 px-4 py-2 text-sm font-bold text-sky-700">Dashboard</span>
+            <div>
+              <p class="text-sm text-slate">스마트 제조 방향</p>
+              <p class="mt-2 text-2xl font-bold text-ink">MES + Dashboard</p>
+            </div>
           </div>
-          <h2 class="mt-8 break-kr text-4xl font-bold tracking-tight text-ink">스마트 제조 확장</h2>
-          <p class="mt-4 break-kr text-lg leading-relaxed text-slate">
-            생산실적 자동집계, 공정 진행 가시화, 품질·불량 분석, AI 보조기능으로
-            이어지는 제조 데이터 활용 구조를 준비 중입니다.
-          </p>
-          <a href="../docs/SND_dashboard_prototype.html" class="cta-btn mt-8 inline-flex w-full items-center justify-center gap-3 rounded-full bg-brand px-6 py-4 text-base font-bold text-white shadow-soft">
-            Dashboard 시안 보기
-            <iconify-icon icon="solar:arrow-right-linear" width="22"></iconify-icon>
-          </a>
-        </article>
+        </div>
       </div>
     </section>
 
-    <section id="company" class="px-4 py-20 sm:px-6 lg:px-8">
-      <div class="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.88fr_1.12fr]">
+    <section id="company" class="px-4 py-24 sm:px-6 lg:px-8">
+      <div class="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.88fr_1.12fr]">
         <div class="reveal break-kr">
           <span class="inline-flex rounded-full bg-blue-100 px-4 py-2 text-sm font-bold text-brand">Company Overview</span>
           <h2 class="mt-6 font-display text-3xl font-bold leading-tight tracking-tight text-ink sm:text-5xl">
@@ -264,22 +358,22 @@
         </div>
 
         <div class="grid gap-5 sm:grid-cols-2 reveal" style="transition-delay: 90ms;">
-          <div class="soft-card rounded-[1.8rem] border border-line bg-white p-7 shadow-card">
+          <div class="soft-card rounded-[1.8rem] border border-line bg-white p-7 shadow-plate">
             <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-50 text-brand">
               <iconify-icon icon="solar:factory-bold-duotone" width="28"></iconify-icon>
             </div>
             <h3 class="mt-5 text-2xl font-bold text-ink">창원 기반 제조 인프라</h3>
             <p class="mt-3 break-kr text-base leading-relaxed text-slate">지역 제조 인프라와 현장 대응력을 기반으로 항공·방산 고객 요구를 빠르게 소화합니다.</p>
           </div>
-          <div class="soft-card rounded-[1.8rem] border border-line bg-white p-7 shadow-card">
-            <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-amber-50 text-amber-500">
+          <div class="soft-card rounded-[1.8rem] border border-line bg-white p-7 shadow-plate">
+            <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-goldsoft text-[#d18d00]">
               <iconify-icon icon="solar:medal-ribbons-star-bold-duotone" width="28"></iconify-icon>
             </div>
             <h3 class="mt-5 text-2xl font-bold text-ink">품질과 추적성 중심</h3>
             <p class="mt-3 break-kr text-base leading-relaxed text-slate">검사, FAI, 출하, 시정조치까지 품질 흐름을 구조화해 신뢰도를 높입니다.</p>
           </div>
-          <div class="soft-card rounded-[1.8rem] border border-line bg-white p-7 shadow-card sm:col-span-2">
-            <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-sky-50 text-sky-500">
+          <div class="soft-card rounded-[1.8rem] border border-line bg-white p-7 shadow-plate sm:col-span-2">
+            <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-sky-50 text-sky">
               <iconify-icon icon="solar:graph-new-bold-duotone" width="28"></iconify-icon>
             </div>
             <h3 class="mt-5 text-2xl font-bold text-ink">데이터 기반 제조 운영으로 확장</h3>
@@ -291,7 +385,7 @@
       </div>
     </section>
 
-    <section id="capabilities" class="px-4 py-20 sm:px-6 lg:px-8">
+    <section id="capabilities" class="px-4 py-24 sm:px-6 lg:px-8">
       <div class="mx-auto max-w-7xl">
         <div class="reveal break-kr">
           <span class="inline-flex rounded-full bg-blue-100 px-4 py-2 text-sm font-bold text-brand">Capabilities</span>
@@ -302,51 +396,55 @@
         </div>
 
         <div class="mt-12 grid gap-6 lg:grid-cols-12">
-          <div class="soft-card reveal rounded-[2rem] border border-line bg-white p-8 shadow-card lg:col-span-7">
-            <div class="flex items-center justify-between gap-4">
-              <div>
-                <p class="text-sm font-semibold text-brand">Core Process Map</p>
-                <h3 class="mt-2 text-3xl font-bold text-ink">정밀 가공부터 검사까지 연결되는 공정 흐름</h3>
+          <div class="double-plate reveal lg:col-span-7">
+            <div class="h-full p-8">
+              <div class="flex items-center justify-between gap-4">
+                <div>
+                  <p class="text-sm font-semibold text-brand">Core Process Map</p>
+                  <h3 class="mt-2 text-3xl font-bold text-ink">정밀 가공부터 검사까지 연결되는 공정 흐름</h3>
+                </div>
+                <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-50 text-brand">
+                  <iconify-icon icon="solar:widget-4-bold-duotone" width="28"></iconify-icon>
+                </div>
               </div>
-              <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-50 text-brand">
-                <iconify-icon icon="solar:widget-4-bold-duotone" width="28"></iconify-icon>
-              </div>
-            </div>
-            <div class="mt-8 grid gap-4 md:grid-cols-2">
-              <div class="rounded-[1.5rem] bg-shell p-5">
-                <p class="text-lg font-bold text-ink">3축 / 4축 MCT 가공</p>
-                <p class="mt-2 break-kr text-sm leading-relaxed text-slate">항공 구조물과 방산 부품을 위한 정밀 가공 역량을 운영합니다.</p>
-              </div>
-              <div class="rounded-[1.5rem] bg-shell p-5">
-                <p class="text-lg font-bold text-ink">Router 가공</p>
-                <p class="mt-2 break-kr text-sm leading-relaxed text-slate">대형 판재와 복합 형상 대응을 위한 공정을 안정적으로 수행합니다.</p>
-              </div>
-              <div class="rounded-[1.5rem] bg-shell p-5">
-                <p class="text-lg font-bold text-ink">특수 성형 공정</p>
-                <p class="mt-2 break-kr text-sm leading-relaxed text-slate">Hot Joggle, Hydraulic Forming, Press Brake 기반 성형을 지원합니다.</p>
-              </div>
-              <div class="rounded-[1.5rem] bg-shell p-5">
-                <p class="text-lg font-bold text-ink">품질 검증 체계</p>
-                <p class="mt-2 break-kr text-sm leading-relaxed text-slate">FAI, 공정검사, 출하검사, 추적성 관리로 품질 흐름을 구조화합니다.</p>
+              <div class="mt-8 grid gap-4 md:grid-cols-2">
+                <div class="rounded-[1.5rem] bg-shell p-5">
+                  <p class="text-lg font-bold text-ink">3축 / 4축 MCT 가공</p>
+                  <p class="mt-2 break-kr text-sm leading-relaxed text-slate">항공 구조물과 방산 부품을 위한 정밀 가공 역량을 운영합니다.</p>
+                </div>
+                <div class="rounded-[1.5rem] bg-shell p-5">
+                  <p class="text-lg font-bold text-ink">Router 가공</p>
+                  <p class="mt-2 break-kr text-sm leading-relaxed text-slate">대형 판재와 복합 형상 대응을 위한 공정을 안정적으로 수행합니다.</p>
+                </div>
+                <div class="rounded-[1.5rem] bg-shell p-5">
+                  <p class="text-lg font-bold text-ink">특수 성형 공정</p>
+                  <p class="mt-2 break-kr text-sm leading-relaxed text-slate">Hot Joggle, Hydraulic Forming, Press Brake 기반 성형을 지원합니다.</p>
+                </div>
+                <div class="rounded-[1.5rem] bg-shell p-5">
+                  <p class="text-lg font-bold text-ink">품질 검증 체계</p>
+                  <p class="mt-2 break-kr text-sm leading-relaxed text-slate">FAI, 공정검사, 출하검사, 추적성 관리로 품질 흐름을 구조화합니다.</p>
+                </div>
               </div>
             </div>
           </div>
 
-          <div class="soft-card reveal rounded-[2rem] border border-line bg-white p-8 shadow-card lg:col-span-5" style="transition-delay: 100ms;">
-            <p class="text-sm font-semibold text-brand">Major Programs</p>
-            <h3 class="mt-2 text-3xl font-bold text-ink">항공과 방산 프로그램 대응</h3>
-            <div class="mt-8 space-y-4">
-              <div class="rounded-[1.5rem] border border-blue-100 bg-blue-50/60 p-5">
-                <p class="text-lg font-bold text-ink">항공 부문</p>
-                <p class="mt-2 break-kr text-sm leading-relaxed text-slate">B737, Embraer E2, C390 기반 부품 가공과 구조물 대응</p>
-              </div>
-              <div class="rounded-[1.5rem] border border-blue-100 bg-blue-50/60 p-5">
-                <p class="text-lg font-bold text-ink">방산 부문</p>
-                <p class="mt-2 break-kr text-sm leading-relaxed text-slate">KF-21, LAH, K9 자주포, 차륜형 장갑차, 함포 부품 가공</p>
-              </div>
-              <div class="rounded-[1.5rem] border border-blue-100 bg-blue-50/60 p-5">
-                <p class="text-lg font-bold text-ink">치공구 제작</p>
-                <p class="mt-2 break-kr text-sm leading-relaxed text-slate">조립용 지그, 고정구, 검사구까지 고객 맞춤형 툴링을 지원합니다.</p>
+          <div class="double-plate reveal lg:col-span-5" style="transition-delay: 100ms;">
+            <div class="h-full p-8">
+              <p class="text-sm font-semibold text-brand">Major Programs</p>
+              <h3 class="mt-2 text-3xl font-bold text-ink">항공과 방산 프로그램 대응</h3>
+              <div class="mt-8 space-y-4">
+                <div class="program-card rounded-[1.5rem] border border-blue-100 bg-blue-50/60 p-5">
+                  <p class="text-lg font-bold text-ink">항공 부문</p>
+                  <p class="mt-2 break-kr text-sm leading-relaxed text-slate">B737, Embraer E2, C390 기반 부품 가공과 구조물 대응</p>
+                </div>
+                <div class="program-card rounded-[1.5rem] border border-blue-100 bg-blue-50/60 p-5">
+                  <p class="text-lg font-bold text-ink">방산 부문</p>
+                  <p class="mt-2 break-kr text-sm leading-relaxed text-slate">KF-21, LAH, K9 자주포, 차륜형 장갑차, 함포 부품 가공</p>
+                </div>
+                <div class="program-card rounded-[1.5rem] border border-blue-100 bg-blue-50/60 p-5">
+                  <p class="text-lg font-bold text-ink">치공구 제작</p>
+                  <p class="mt-2 break-kr text-sm leading-relaxed text-slate">조립용 지그, 고정구, 검사구까지 고객 맞춤형 툴링을 지원합니다.</p>
+                </div>
               </div>
             </div>
           </div>
@@ -354,7 +452,7 @@
       </div>
     </section>
 
-    <section id="quality" class="px-4 py-20 sm:px-6 lg:px-8">
+    <section id="quality" class="px-4 py-24 sm:px-6 lg:px-8">
       <div class="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[1.04fr_0.96fr]">
         <div class="reveal">
           <span class="inline-flex rounded-full bg-blue-100 px-4 py-2 text-sm font-bold text-brand">Quality System</span>
@@ -363,47 +461,49 @@
             <span class="block text-brand">끊기지 않는 품질 흐름</span>
           </h2>
           <div class="mt-8 grid gap-4">
-            <div class="soft-card rounded-[1.5rem] border border-line bg-white p-5 shadow-soft">
+            <div class="soft-card rounded-[1.5rem] border border-line bg-white p-5 shadow-float">
               <p class="text-sm font-semibold text-brand">01 계약 검토</p>
               <p class="mt-2 break-kr text-lg font-bold text-ink">고객 요구사항과 기술 타당성을 사전에 검토합니다</p>
             </div>
-            <div class="soft-card rounded-[1.5rem] border border-line bg-white p-5 shadow-soft">
+            <div class="soft-card rounded-[1.5rem] border border-line bg-white p-5 shadow-float">
               <p class="text-sm font-semibold text-brand">02 공정 계획</p>
               <p class="mt-2 break-kr text-lg font-bold text-ink">공정 설계, 작업 표준서, 설비와 치공구 준비를 체계화합니다</p>
             </div>
-            <div class="soft-card rounded-[1.5rem] border border-line bg-white p-5 shadow-soft">
+            <div class="soft-card rounded-[1.5rem] border border-line bg-white p-5 shadow-float">
               <p class="text-sm font-semibold text-brand">03 검사 및 검증</p>
               <p class="mt-2 break-kr text-lg font-bold text-ink">FAI, 공정검사, 출하검사, 추적성 관리로 부적합을 낮춥니다</p>
             </div>
-            <div class="soft-card rounded-[1.5rem] border border-line bg-white p-5 shadow-soft">
+            <div class="soft-card rounded-[1.5rem] border border-line bg-white p-5 shadow-float">
               <p class="text-sm font-semibold text-brand">04 지속적 개선</p>
               <p class="mt-2 break-kr text-lg font-bold text-ink">내부 심사와 데이터 분석을 통해 개선을 이어갑니다</p>
             </div>
           </div>
         </div>
 
-        <div class="soft-card reveal rounded-[2rem] border border-line bg-[linear-gradient(180deg,#ffffff,#f6f9ff)] p-8 shadow-card" style="transition-delay: 80ms;">
-          <p class="text-sm font-semibold text-brand">Certified Quality</p>
-          <h3 class="mt-2 break-kr text-3xl font-bold text-ink">AS9100 기반 품질 운영으로 글로벌 수준의 보증 체계를 유지합니다</h3>
-          <div class="mt-8 space-y-4">
-            <div class="rounded-[1.5rem] bg-shell p-5">
-              <p class="text-sm text-slate">인증 범위</p>
-              <p class="mt-2 break-kr text-lg font-bold text-ink">항공 및 방산 부품의 가공과 성형</p>
-            </div>
-            <div class="rounded-[1.5rem] bg-shell p-5">
-              <p class="text-sm text-slate">품질 정책</p>
-              <p class="mt-2 break-kr text-lg font-bold text-ink">고객 만족 실현 · 무결점 품질 확보 · 지속적 품질 개선</p>
-            </div>
-            <div class="rounded-[1.5rem] bg-shell p-5">
-              <p class="text-sm text-slate">검사 인프라</p>
-              <p class="mt-2 break-kr text-lg font-bold text-ink">CMM 측정기, 공정검사, 초도품 검사, 출하검증 체계</p>
+        <div class="double-plate reveal" style="transition-delay: 80ms;">
+          <div class="p-8">
+            <p class="text-sm font-semibold text-brand">Certified Quality</p>
+            <h3 class="mt-2 break-kr text-3xl font-bold text-ink">AS9100 기반 품질 운영으로 글로벌 수준의 보증 체계를 유지합니다</h3>
+            <div class="mt-8 space-y-4">
+              <div class="rounded-[1.5rem] bg-shell p-5">
+                <p class="text-sm text-slate">인증 범위</p>
+                <p class="mt-2 break-kr text-lg font-bold text-ink">항공 및 방산 부품의 가공과 성형</p>
+              </div>
+              <div class="rounded-[1.5rem] bg-shell p-5">
+                <p class="text-sm text-slate">품질 정책</p>
+                <p class="mt-2 break-kr text-lg font-bold text-ink">고객 만족 실현 · 무결점 품질 확보 · 지속적 품질 개선</p>
+              </div>
+              <div class="rounded-[1.5rem] bg-shell p-5">
+                <p class="text-sm text-slate">검사 인프라</p>
+                <p class="mt-2 break-kr text-lg font-bold text-ink">CMM 측정기, 공정검사, 초도품 검사, 출하검증 체계</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="future" class="px-4 py-20 sm:px-6 lg:px-8">
+    <section id="future" class="px-4 py-24 sm:px-6 lg:px-8">
       <div class="mx-auto max-w-7xl">
         <div class="reveal break-kr">
           <span class="inline-flex rounded-full bg-blue-100 px-4 py-2 text-sm font-bold text-brand">Smart Manufacturing Roadmap</span>
@@ -414,22 +514,22 @@
         </div>
 
         <div class="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-          <div class="soft-card reveal rounded-[1.8rem] border border-line bg-white p-6 shadow-card">
+          <div class="soft-card reveal rounded-[1.8rem] border border-line bg-white p-6 shadow-plate">
             <p class="text-sm font-semibold text-brand">Step 1</p>
             <h3 class="mt-3 text-2xl font-bold text-ink">생산실적 자동집계</h3>
             <p class="mt-3 break-kr text-sm leading-relaxed text-slate">일·주·월 실적과 계획 대비 완료율을 빠르게 집계하는 구조를 준비합니다.</p>
           </div>
-          <div class="soft-card reveal rounded-[1.8rem] border border-line bg-white p-6 shadow-card" style="transition-delay: 70ms;">
+          <div class="soft-card reveal rounded-[1.8rem] border border-line bg-white p-6 shadow-plate" style="transition-delay: 70ms;">
             <p class="text-sm font-semibold text-brand">Step 2</p>
             <h3 class="mt-3 text-2xl font-bold text-ink">공정 진행 가시화</h3>
             <p class="mt-3 break-kr text-sm leading-relaxed text-slate">MCT, Router, 설비 정지, 병목 공정을 한 화면에서 보는 구조를 만듭니다.</p>
           </div>
-          <div class="soft-card reveal rounded-[1.8rem] border border-line bg-white p-6 shadow-card" style="transition-delay: 140ms;">
+          <div class="soft-card reveal rounded-[1.8rem] border border-line bg-white p-6 shadow-plate" style="transition-delay: 140ms;">
             <p class="text-sm font-semibold text-brand">Step 3</p>
             <h3 class="mt-3 text-2xl font-bold text-ink">품질·불량 분석</h3>
             <p class="mt-3 break-kr text-sm leading-relaxed text-slate">불량유형, 재검 이력, 품질 문서를 작업번호 기준으로 연결합니다.</p>
           </div>
-          <div class="soft-card reveal rounded-[1.8rem] border border-line bg-white p-6 shadow-card" style="transition-delay: 210ms;">
+          <div class="soft-card reveal rounded-[1.8rem] border border-line bg-white p-6 shadow-plate" style="transition-delay: 210ms;">
             <p class="text-sm font-semibold text-brand">Step 4</p>
             <h3 class="mt-3 text-2xl font-bold text-ink">AI 보조기능</h3>
             <p class="mt-3 break-kr text-sm leading-relaxed text-slate">KPI 변동원인 요약, 반복불량 탐색, 보고 자동화로 판단 속도를 높입니다.</p>
@@ -438,35 +538,40 @@
       </div>
     </section>
 
-    <section class="px-4 py-20 sm:px-6 lg:px-8">
-      <div class="mx-auto max-w-7xl reveal rounded-[2rem] border border-line bg-[linear-gradient(135deg,#eef5ff,#ffffff)] p-8 shadow-card lg:p-10">
-        <div class="grid gap-8 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
-          <div class="break-kr">
-            <span class="inline-flex rounded-full bg-blue-100 px-4 py-2 text-sm font-bold text-brand">Integrated View</span>
-            <h2 class="mt-6 font-display text-3xl font-bold leading-tight tracking-tight text-ink sm:text-5xl">
-              현장 실적과 품질 이력을
-              <span class="block text-brand">한 화면에서 보는 운영 체계</span>
-            </h2>
-            <p class="mt-5 max-w-2xl text-lg leading-relaxed text-slate">
-              생산실적, 공정, 설비, 품질 데이터를 같은 기준으로 연결하면 보고 속도뿐 아니라
-              문제 대응과 납기 예측의 질도 함께 올라갑니다.
-            </p>
-          </div>
-          <div class="rounded-[1.8rem] border border-blue-100 bg-white p-7 shadow-soft">
-            <p class="text-sm font-semibold text-brand">Preview Asset</p>
-            <h3 class="mt-3 break-kr text-3xl font-bold text-ink">SND Dashboard Prototype</h3>
-            <p class="mt-3 break-kr text-base leading-relaxed text-slate">경영자, 관리팀, 생산팀, 품질팀 기준으로 구분된 Dashboard 시안을 함께 검토할 수 있습니다.</p>
-            <a href="../docs/SND_dashboard_prototype.html" class="cta-btn mt-7 inline-flex items-center gap-3 rounded-full bg-brand px-6 py-4 text-base font-bold text-white shadow-soft">
-              시안 열기
-              <iconify-icon icon="solar:arrow-right-linear" width="22"></iconify-icon>
-            </a>
+    <section class="px-4 py-24 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-7xl reveal">
+        <div class="hero-stage rounded-[2.2rem] px-8 py-10 shadow-frame lg:px-10">
+          <div class="hero-grid"></div>
+          <div class="relative z-10 grid gap-8 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
+            <div class="break-kr">
+              <span class="inline-flex rounded-full bg-white/14 px-4 py-2 text-sm font-bold text-white">Integrated View</span>
+              <h2 class="mt-6 font-display text-3xl font-bold leading-tight tracking-tight text-white sm:text-5xl">
+                현장 실적과 품질 이력을
+                <span class="block text-sky">한 화면에서 보는 운영 체계</span>
+              </h2>
+              <p class="mt-5 max-w-2xl text-lg leading-relaxed text-blue-50/92">
+                생산실적, 공정, 설비, 품질 데이터를 같은 기준으로 연결하면 보고 속도뿐 아니라
+                문제 대응과 납기 예측의 질도 함께 올라갑니다.
+              </p>
+            </div>
+            <div class="rounded-[1.8rem] border border-white/12 bg-white/10 p-7 backdrop-blur-sm">
+              <p class="text-sm font-semibold text-blue-100">Preview Asset</p>
+              <h3 class="mt-3 break-kr text-3xl font-bold text-white">SND Dashboard Prototype</h3>
+              <p class="mt-3 break-kr text-base leading-relaxed text-blue-50/92">경영자, 관리팀, 생산팀, 품질팀 기준으로 구분된 Dashboard 시안을 함께 검토할 수 있습니다.</p>
+              <a href="../docs/SND_dashboard_prototype.html" class="cta-btn mt-7 inline-flex items-center gap-3 rounded-full bg-white px-6 py-4 text-base font-bold text-ink shadow-float">
+                시안 열기
+                <span class="flex h-9 w-9 items-center justify-center rounded-full bg-deep text-white">
+                  <iconify-icon icon="solar:arrow-right-linear" width="20"></iconify-icon>
+                </span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <section id="contact" class="px-4 pb-20 pt-6 sm:px-6 lg:px-8">
-      <div class="mx-auto max-w-7xl reveal rounded-[2rem] border border-brand/10 bg-[linear-gradient(135deg,#1b63e6,#2498ff)] px-8 py-10 text-white shadow-halo sm:px-10">
+      <div class="mx-auto max-w-7xl reveal rounded-[2rem] border border-brand/10 bg-[linear-gradient(135deg,#1b63e6,#2498ff)] px-8 py-10 text-white shadow-frame sm:px-10">
         <div class="grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
           <div class="break-kr">
             <span class="inline-flex rounded-full bg-white/18 px-4 py-2 text-sm font-bold text-white">Contact & Next Step</span>
