@@ -149,6 +149,32 @@
     .canary-accent {
       color: #c38a00;
     }
+    .canary-panel {
+      position: relative;
+      overflow: hidden;
+    }
+    .canary-panel::before {
+      content: "";
+      position: absolute;
+      left: 10px;
+      right: 10px;
+      top: 0;
+      height: 4px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, rgba(255,210,51,0.25), rgba(255,210,51,0.95), rgba(255,210,51,0.25));
+    }
+    .canary-button {
+      background: linear-gradient(180deg, rgba(255,210,51,1), rgba(255,197,24,0.96));
+      color: #172640;
+      box-shadow:
+        0 18px 34px rgba(255,210,51,0.16),
+        inset 0 1px 0 rgba(255,255,255,0.55);
+    }
+    .canary-button:hover {
+      box-shadow:
+        0 20px 40px rgba(255,210,51,0.22),
+        inset 0 1px 0 rgba(255,255,255,0.6);
+    }
     .hero-silhouette {
       position: absolute;
       right: 5%;
@@ -357,7 +383,7 @@
   <header class="sticky top-0 z-40 border-b border-white/70 bg-white/88 backdrop-blur-xl">
     <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
       <a href="#top" class="flex items-center gap-3">
-        <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-brand text-white shadow-float">
+        <div class="canary-panel flex h-14 w-14 items-center justify-center rounded-2xl bg-brand text-white shadow-float">
           <iconify-icon icon="solar:radar-2-bold-duotone" width="28"></iconify-icon>
         </div>
         <div class="break-kr">
@@ -369,7 +395,7 @@
       <nav class="hidden items-center gap-4 md:flex">
         <a href="#company" class="nav-pill rounded-full border border-line bg-white px-6 py-3 text-sm font-semibold text-brand">회사소개</a>
         <a href="#business" class="nav-pill rounded-full border border-white bg-white px-6 py-3 text-sm font-semibold text-branddeep">사업분야</a>
-        <a href="#capabilities" class="nav-pill rounded-full border border-transparent bg-gold px-6 py-3 text-sm font-semibold text-ink shadow-float">핵심역량</a>
+        <a href="#capabilities" class="nav-pill canary-button rounded-full border border-transparent px-6 py-3 text-sm font-semibold shadow-float">핵심역량</a>
         <a href="#quality" class="nav-pill rounded-full border border-white bg-white px-6 py-3 text-sm font-semibold text-branddeep">품질체계</a>
         <a href="#future" class="nav-pill rounded-full border border-transparent bg-brand px-6 py-3 text-sm font-semibold text-white shadow-float">스마트 제조</a>
         <a href="#contact" class="nav-pill rounded-full border border-line bg-white px-6 py-3 text-sm font-semibold text-brand">문의하기</a>
@@ -418,7 +444,7 @@
               </p>
 
               <div class="mt-8 flex flex-col gap-4 sm:flex-row">
-                <a href="#capabilities" class="cta-btn inline-flex items-center justify-center gap-3 rounded-full bg-white px-8 py-4 text-base font-bold text-ink shadow-float">
+                <a href="#capabilities" class="cta-btn canary-button inline-flex items-center justify-center gap-3 rounded-full px-8 py-4 text-base font-bold shadow-float">
                   핵심 역량 보기
                   <span class="flex h-9 w-9 items-center justify-center rounded-full bg-deep text-white">
                     <iconify-icon icon="solar:arrow-right-linear" width="20"></iconify-icon>
@@ -480,8 +506,8 @@
                       </div>
                     </div>
 
-              <div class="rounded-[1.8rem] border border-line bg-white p-5 shadow-inner canary-line">
-                <p class="text-sm font-semibold text-brand">Manufacturing Field</p>
+                    <div class="rounded-[1.8rem] border border-line bg-white p-5 shadow-inner canary-line canary-panel">
+                      <p class="text-sm font-semibold text-brand">Manufacturing Field</p>
                       <div class="mt-5 space-y-3">
                         <div class="rounded-2xl bg-shell p-4">
                           <p class="font-semibold text-ink">3축 / 4축 MCT</p>
@@ -706,7 +732,7 @@
             </ul>
           </article>
 
-          <article class="soft-card reveal rounded-[1.9rem] border border-line bg-white p-7 shadow-plate" style="transition-delay: 80ms;">
+          <article class="soft-card reveal rounded-[1.9rem] border border-line bg-white p-7 shadow-plate canary-panel" style="transition-delay: 80ms;">
             <div class="flex h-16 w-16 items-center justify-center rounded-2xl bg-goldsoft text-[#d18d00] canary-line">
               <iconify-icon icon="solar:shield-minimalistic-bold-duotone" width="32"></iconify-icon>
             </div>
@@ -843,7 +869,7 @@
                 <p class="text-sm text-slate">인증 범위</p>
                 <p class="mt-2 break-kr text-lg font-bold text-ink">항공 및 방산 부품의 가공과 성형</p>
               </div>
-              <div class="rounded-[1.5rem] bg-shell p-5 canary-line">
+              <div class="rounded-[1.5rem] bg-shell p-5 canary-line canary-panel">
                 <p class="text-sm text-slate">품질 정책</p>
                 <p class="mt-2 break-kr text-lg font-bold text-ink">고객 만족 실현 · 무결점 품질 확보 · 지속적 품질 개선</p>
               </div>
