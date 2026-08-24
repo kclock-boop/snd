@@ -175,6 +175,76 @@
         0 20px 40px rgba(255,210,51,0.22),
         inset 0 1px 0 rgba(255,255,255,0.6);
     }
+    .brand-lockup {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 10px 16px 10px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(31,111,255,0.10);
+      background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(246,250,255,0.92));
+      box-shadow:
+        0 18px 34px rgba(24, 61, 149, 0.08),
+        inset 0 1px 0 rgba(255,255,255,0.9);
+    }
+    .brand-mark {
+      position: relative;
+      overflow: hidden;
+      flex-shrink: 0;
+      width: 58px;
+      height: 58px;
+      border-radius: 1.25rem;
+      background:
+        radial-gradient(circle at 28% 24%, rgba(255,255,255,0.20), transparent 34%),
+        linear-gradient(160deg, #175ae0 0%, #0f3f9f 58%, #0a2c73 100%);
+      box-shadow:
+        0 16px 30px rgba(18, 63, 158, 0.22),
+        inset 0 1px 0 rgba(255,255,255,0.22);
+    }
+    .brand-mark::after {
+      content: "";
+      position: absolute;
+      inset: 9px;
+      border-radius: 0.95rem;
+      border: 1px solid rgba(255,255,255,0.16);
+      pointer-events: none;
+    }
+    .brand-grid {
+      position: absolute;
+      inset: 0;
+      opacity: 0.12;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.85) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.85) 1px, transparent 1px);
+      background-size: 10px 10px;
+      mask-image: linear-gradient(180deg, rgba(0,0,0,0.7), transparent 100%);
+    }
+    .brand-copy {
+      min-width: 0;
+    }
+    .brand-copy .brand-kicker {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: #c38a00;
+    }
+    .brand-copy .brand-title {
+      margin-top: 2px;
+      font-family: "Geist", "Pretendard", system-ui, sans-serif;
+      font-size: 1.28rem;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      color: #172640;
+      line-height: 1.05;
+    }
+    .brand-copy .brand-subtitle {
+      margin-top: 3px;
+      font-size: 0.82rem;
+      color: #5c6d88;
+      line-height: 1.2;
+    }
     .hero-silhouette {
       position: absolute;
       right: 5%;
@@ -382,13 +452,17 @@
 <body class="min-h-screen overflow-x-hidden">
   <header class="sticky top-0 z-40 border-b border-white/70 bg-white/88 backdrop-blur-xl">
     <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-      <a href="#top" class="flex items-center gap-3">
-        <div class="canary-panel flex h-14 w-14 items-center justify-center rounded-2xl bg-brand text-white shadow-float">
-          <iconify-icon icon="solar:radar-2-bold-duotone" width="28"></iconify-icon>
+      <a href="#top" class="brand-lockup">
+        <div class="brand-mark">
+          <div class="brand-grid"></div>
+          <div class="canary-panel flex h-full w-full items-center justify-center text-white">
+            <iconify-icon icon="solar:radar-2-bold-duotone" width="28"></iconify-icon>
+          </div>
         </div>
-        <div class="break-kr">
-          <p class="font-display text-xl font-bold tracking-tight text-ink">SND</p>
-          <p class="text-sm text-slate">항공·방산 정밀가공 파트너</p>
+        <div class="brand-copy break-kr">
+          <p class="brand-kicker">Space & Defence</p>
+          <p class="brand-title">SND</p>
+          <p class="brand-subtitle">항공·방산 정밀가공 파트너</p>
         </div>
       </a>
 
