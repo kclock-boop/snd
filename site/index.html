@@ -146,12 +146,13 @@
     }
     .hero-orbit {
       position: absolute;
-      right: 4%;
-      top: 4%;
-      width: 420px;
-      height: 420px;
+      right: 28%;
+      top: 6%;
+      width: 520px;
+      height: 520px;
       pointer-events: none;
-      opacity: 0.92;
+      opacity: 1;
+      z-index: 2;
     }
     .hero-orbit::before,
     .hero-orbit::after {
@@ -162,14 +163,14 @@
       border: 1px solid rgba(255,255,255,0.10);
     }
     .hero-orbit::after {
-      inset: 38px;
-      border-color: rgba(83,197,255,0.18);
+      inset: 42px;
+      border-color: rgba(83,197,255,0.34);
       border-style: dashed;
     }
     .orbit-ring {
       position: absolute;
       inset: 0;
-      animation: orbit-spin 24s linear infinite;
+      animation: orbit-spin 16s linear infinite;
       transform-origin: 50% 50%;
     }
     .orbit-plane {
@@ -179,31 +180,31 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 78px;
-      height: 78px;
-      margin-left: -39px;
-      margin-top: -39px;
+      width: 96px;
+      height: 96px;
+      margin-left: -48px;
+      margin-top: -48px;
       border-radius: 999px;
-      background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.28), rgba(53,182,255,0.14));
-      border: 1px solid rgba(255,255,255,0.18);
+      background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.40), rgba(53,182,255,0.22));
+      border: 1px solid rgba(255,255,255,0.28);
       box-shadow:
-        0 20px 40px rgba(12, 29, 66, 0.34),
-        inset 0 1px 0 rgba(255,255,255,0.22);
+        0 20px 48px rgba(12, 29, 66, 0.42),
+        inset 0 1px 0 rgba(255,255,255,0.28);
       color: #ffffff;
-      transform: translateY(-174px) rotate(18deg);
+      transform: translateY(-216px) rotate(18deg);
       backdrop-filter: blur(8px);
     }
     .orbit-plane::before {
       content: "";
       position: absolute;
       top: 50%;
-      right: 64px;
-      width: 92px;
-      height: 2px;
+      right: 78px;
+      width: 118px;
+      height: 3px;
       transform: translateY(-50%);
       background: linear-gradient(90deg, rgba(255,255,255,0), rgba(120,213,255,0.85));
       filter: blur(1px);
-      opacity: 0.92;
+      opacity: 1;
     }
     .orbit-plane iconify-icon {
       filter: drop-shadow(0 8px 18px rgba(0,0,0,0.24));
@@ -212,12 +213,12 @@
       position: absolute;
       left: 50%;
       top: 50%;
-      width: 158px;
-      height: 158px;
+      width: 220px;
+      height: 220px;
       transform: translate(-50%, -50%);
       border-radius: 999px;
       background:
-        radial-gradient(circle, rgba(53,182,255,0.24), rgba(53,182,255,0.02) 62%, rgba(255,255,255,0) 72%);
+        radial-gradient(circle, rgba(53,182,255,0.32), rgba(53,182,255,0.06) 62%, rgba(255,255,255,0) 72%);
       filter: blur(1px);
     }
     @keyframes orbit-spin {
@@ -270,17 +271,21 @@
     }
     @media (max-width: 1279px) {
       .hero-orbit {
-        width: 320px;
-        height: 320px;
-        right: -2%;
-        top: 2%;
+        width: 360px;
+        height: 360px;
+        right: 26%;
+        top: 4%;
       }
       .orbit-plane {
-        transform: translateY(-128px) rotate(18deg);
+        width: 76px;
+        height: 76px;
+        margin-left: -38px;
+        margin-top: -38px;
+        transform: translateY(-148px) rotate(18deg);
       }
       .orbit-plane::before {
-        width: 68px;
-        right: 58px;
+        width: 84px;
+        right: 62px;
       }
     }
     @media (max-width: 1023px) {
